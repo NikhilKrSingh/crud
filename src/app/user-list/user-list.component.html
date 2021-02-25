@@ -1,0 +1,92 @@
+
+<div class="bg-light border-right" id="sidebar-wrapper">
+
+  <div class="list-group list-group-flush">
+    <a routerLink="/main" class="list-group-item list-group-item-action bg-light"></a>
+
+
+
+    <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Reports</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">About Us</a> -->
+  </div>
+
+</div>
+
+<div id="page-content-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <ul>
+      <li>
+        <div ngbDropdownMenu aria-labelledy="navbarDropdown1" class="dropdown-menu">
+          <a class="dropdown-item" ngbDropdownItem>Profile</a>
+          <a class="dropdown-item" ngbDropdownItem>Change Password</a>
+          <a class="dropdown-item" routerLink="home" ngbDropdownItem>Log Out</a>
+        </div>
+
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="container-fluid">
+
+      <!-- <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username"
+          aria-describedby="basic-addon2"> -->
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" routerLink="/new-user">Add new User</button>
+
+        </div>
+
+
+      <!-- </div> -->
+
+
+      <br>
+      <br>
+
+
+
+      <table class="table table-striped">
+
+        <thead>
+          <tr style="font-size: medium;">
+            <th>Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Edit</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let user of data"> 
+          
+
+            <td>{{user.first_name}} {{user.last_name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td><a  class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-edit" (click)="editPage(user)"> Edit </span>
+              </a></td>
+
+
+
+            <td><button type="button" class="btn btn-danger" (click)="deleteuser(user.id)">Delete</button>
+            
+          </tr>
+
+         
+
+           
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>
+</div>
