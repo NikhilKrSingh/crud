@@ -96,18 +96,15 @@ export class CreateUserComponent implements OnInit {
     this.email = d.email;
     this.phno = d.phno;
 
-    console.log('hi')
-    //we need to hit the api for updation
-    // this.user_list.updateData(demodata).subscribe();
+  
 
-    console.log("done lets")
+ 
 
 
     this.user_roles.updateRole(this.data).subscribe((result: any) => {
       this.route.navigateByUrl('/user-list');
 
-      // display():void{
-      //   console.log("display");
+     
     }
  ) }
 
