@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { CreateUserComponent } from './create-user/create-user.component';
-import { NewUserComponent } from './new-user/new-user.component';
+// import { NewUserComponent } from './new-user/new-user.component';
+import { CreateRoleComponent } from './create-role/create-role.component';
 
 
 
@@ -15,7 +16,8 @@ import { NewUserComponent } from './new-user/new-user.component';
     AppComponent,
     UserListComponent,
     CreateUserComponent,
-    NewUserComponent
+    
+    CreateRoleComponent
 
   ],
   imports: [

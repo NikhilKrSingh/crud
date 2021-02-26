@@ -1,92 +1,114 @@
-
 <div class="bg-light border-right" id="sidebar-wrapper">
 
-  <div class="list-group list-group-flush">
-    <a routerLink="/main" class="list-group-item list-group-item-action bg-light"></a>
+    <!-- <div class="list-group list-group-flush">
+        <a routerLink="/main" class="list-group-item list-group-item-action bg-light"></a>
 
 
 
-    <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Reports</a>
-          <a href="#" class="list-group-item list-group-item-action bg-light">About Us</a> -->
-  </div>
+         <a href="#" class="list-group-item list-group-item-action bg-light">Reports</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">About Us</a> -->
+    <!-- </div> -->
 
 </div>
 
 <div id="page-content-wrapper">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <ul>
-      <li>
-        <div ngbDropdownMenu aria-labelledy="navbarDropdown1" class="dropdown-menu">
-          <a class="dropdown-item" ngbDropdownItem>Profile</a>
-          <a class="dropdown-item" ngbDropdownItem>Change Password</a>
-          <a class="dropdown-item" routerLink="home" ngbDropdownItem>Log Out</a>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <ul>
+            <li>
+                <div ngbDropdownMenu aria-labelledy="navbarDropdown1" class="dropdown-menu">
+                    <a class="dropdown-item" ngbDropdownItem>Profile</a>
+                    <a class="dropdown-item" ngbDropdownItem>Change Password</a>
+                    <a class="dropdown-item" routerLink="home" ngbDropdownItem>Log Out</a>
+                </div>
 
-      </li>
-    </ul>
-  </nav>
-
-  <div class="container-fluid">
+            </li>
+        </ul>
+    </nav>
 
     <div class="container-fluid">
 
-      <!-- <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username"
-          aria-describedby="basic-addon2"> -->
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" routerLink="/new-user">Add new User</button>
+        <div class="container-fluid">
+
+            <button class="btn btn-primary mx-2 float-right" routerLink="/create-role">Create Role</button><br><br>
+            <form action="#"><input type="text" class="form-control search-input form-rounded" id="text-search" name="text-search" [(ngModel)]="searchValue" placeholder="Search for user roles"></form>
+
+
+
+
+            <!-- <br>
+            <div id="tabs" class="float-right">
+                <a><button type="button" class="btn btn-secondary mx-2">All</button></a>
+                <a><button type="button" class="btn btn-success mx-2">Active</button></a>
+                <a><button type="button" class="btn btn-warning mx-2">Inactive</button></a>
+            </div>
+            <br> <br> -->
 
         </div>
 
 
-      <!-- </div> -->
+    </div>
 
 
-      <br>
-      <br>
+    <br>
+    <br>
 
 
 
-      <table class="table table-striped">
+    <table class="table table-striped">
 
         <thead>
-          <tr style="font-size: medium;">
-            <th>Name</th>
-            <th>User Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Edit</th>
-            <th>Action</th>
+            <tr style="font-size: medium;">
+                <th>Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Edit</th>
+                <th>Action</th>
 
-          </tr>
+            </tr>
         </thead>
 
         <tbody>
-          <tr *ngFor="let user of data"> 
-          
+            <tr *ngFor="let user of data">
+                <!-- <tr *ngFor="let user of data | roleSearch: searchValue | paginate: { id: 'listing_pagination',
+              itemsPerPage: 10,
+              currentPage: page,
+              totalItems: totalRecords }"> -->
 
-            <td>{{user.first_name}} {{user.last_name}}</td>
-            <td>{{user.username}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.phone}}</td>
-            <td><a  class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-edit" (click)="editPage(user)"> Edit </span>
-              </a></td>
+                <td>{{user.first_name}} {{user.last_name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <!-- <td>
+                    <a class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-edit" (click)="editPage(user)"> Edit </span>
+                    </a>
+                </td> -->
+
+                <td *ngIf="user.active==true">
+                    <a (click)="editPage(user)"><img width="25px" style="margin-bottom:3px; margin-right:5px" alt="Edit Role" src="assets/images/edit.png" /></a>
+                    <!-- 
+                </td>
+                <td *ngIf="user.active==false"><b>-</b></td>
+
+                <td *ngIf="user.active==true"><button type="button" class="btn btn-danger">Deactivate</button></td>
+                <td *ngIf="user.active==false"><button type="button" class="btn btn-danger">Activate</button></td> -->
 
 
+                    <td><button type="button" class="btn btn-danger" (click)="deleteuser(user.id)">Delete</button>
 
-            <td><button type="button" class="btn btn-danger" (click)="deleteuser(user.id)">Delete</button>
-            
-          </tr>
+            </tr>
 
-         
+            <!-- <div class="text-center">
+                <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"> -->
+            <!-- <pagination-controls id="listing_pagination" (pageChange)="page = $event">
+            </pagination-controls> -->
+            <!-- </div> -->
 
-           
+
         </tbody>
-      </table>
+    </table>
 
 
 
-    </div>
-  </div>
 </div>

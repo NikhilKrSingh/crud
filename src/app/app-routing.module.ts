@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserListComponent } from './user-list/user-list.component';
 // tslint:disable-next-line:import-spacing
 import { CreateUserComponent }from './create-user/create-user.component';
-import { NewUserComponent } from './new-user/new-user.component';
+// import { NewUserComponent } from './new-user/new-user.component';
+// import './new-user/new-user.component.css';
+import { CreateRoleComponent } from './create-role/create-role.component';
+
 
 
 const routes: Routes = [
@@ -19,8 +22,8 @@ const routes: Routes = [
 },
 
 {
-  path: 'new-user',
-  component: NewUserComponent
+ path:'create-role',
+ component: CreateRoleComponent
 },
 
 
