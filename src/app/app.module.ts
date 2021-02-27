@@ -13,7 +13,9 @@ import { RoleSearchPipe } from './role-search.pipe';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { ApexReportComponent } from './apex-report/apex-report.component';
+import { NgApexchartsModule, ApexChart } from 'ng-apexcharts';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CreateUserComponent,
     RoleSearchPipe,
     CreateRoleComponent,
+    ApexReportComponent,
     
 
   ],
@@ -32,10 +35,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     FormsModule,
     NgxPaginationModule,
-   
+    NgApexchartsModule,
     Ng2SearchPipeModule
     ],
-  providers: [],
+  providers: [NgbActiveModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

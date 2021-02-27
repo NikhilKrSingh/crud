@@ -90,16 +90,7 @@ export class CreateRoleComponent implements OnInit {
     
     
 
-      // this.role = d.role;
-      // this.name = d.name;
-      // this.firstName = d.firstName;
-      // this.lastName = d.lastName;
-      // this.email = d.email;
-      // this.phno = d.phno;
-  
-     
-    // we need to hit the api for updation
-    // this.user_roles.createRole(demodata).subscribe();
+ 
 
 
   }

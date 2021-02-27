@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDM5MzYxMCwiZXhwIjoxNjE0NDAzNjEwfQ.sP0mGDy36AcaCrSLVNwPtFMpnVa6N2zt1RL_SuKwXS4'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDQyNTg0NSwiZXhwIjoxNjE0NDM1ODQ1fQ.Z2o7PdSEUcLLGLqZdtXDlSyIezFAjwJyrE2kjEAug0c'
 
 
   getRoles() {
@@ -23,16 +23,6 @@ export class RolesService {
     return this.http.get<any[]>(url, { headers: reqHeader });
   }
 
-
-  getAll() {
-    const url = 'http://devourin-api-qa.chain-expert.com/role/getrolelist?recordsTofetch=3&tenant_id=23'
-    
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': this.token
-    });
-    return this.http.get<any[]>(url, { headers: reqHeader });
-  }
 
 
   getUInactive() {

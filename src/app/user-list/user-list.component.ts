@@ -16,7 +16,7 @@ import { RolesService } from '../role.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  // [x: string]: any;tutorials: Tutorial[] = [];
+
 
   data: any = [];
   id: any;
@@ -28,17 +28,7 @@ export class UserListComponent implements OnInit {
   page: number = 1;
   searchValue: any
   order: any;
-  // roleList: any;
-  // username: any;
-  // firstName: any;
-  // lastName: any;
-  // phone: any;
-  // email: any;
-  // dataAccess: any;
-  // http: any;
-  // totalRecords: Number
 
-  // tslint:disable-next-line:variable-name
   constructor( private router: Router,private user_roles:RolesService ) { }
 
   ngOnInit(): void {
@@ -64,41 +54,7 @@ export class UserListComponent implements OnInit {
 
 
 
-   loadData() {
-    this.user_roles.getRoles().subscribe((result: any) => {
-      console.log(result['data'])
-      let data = result['data'];
-      //this.response = response.data.roleList[0]
-      this.data = data['roleList']
-      this.totalRecords = data['roleList'].length
-      console.log(data)
-      console.log(this.totalRecords = data['roleList'].length)
-    })
-  }
 
-  loadAll(){
-    this.user_roles.getAll().subscribe((result: any) => {
-      console.log(result['data'])
-      let data = result['data'];
-      //this.response = response.data.roleList[0]
-      this.data = data['roleList']
-      this.totalRecords = data['roleList'].length
-      console.log(data)
-      console.log(this.totalRecords = data['roleList'].length)
-    })
-  }
-
-  loadInactive(){
-    this.user_roles.getUInactive().subscribe((result: any) => {
-      console.log(result['data'])
-      let data = result['data'];
-      //this.response = response.data.roleList[0]
-      this.data = data['roleList']
-      this.totalRecords = data['roleList'].length
-      console.log(data)
-      console.log(this.totalRecords = data['roleList'].length)
-    })
-  }
 
 
   deactivateRole(id: any) {
@@ -121,8 +77,7 @@ export class UserListComponent implements OnInit {
     }
     this.user_roles.updateRole(roleData).subscribe((result:any)=>{
       this.ngOnInit();
-      //this.router.navigateByUrl('/user-roles');
-      // console.log(result['data'])
+     
     })
 
 
