@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDMyODc5MCwiZXhwIjoxNjE0MzM4NzkwfQ.Ldiya2Zw1N8OIzar0_BxE3PBVVDM32XjRlxzWgy3CtM'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDM5MzYxMCwiZXhwIjoxNjE0NDAzNjEwfQ.sP0mGDy36AcaCrSLVNwPtFMpnVa6N2zt1RL_SuKwXS4'
 
 
   getRoles() {
@@ -45,7 +45,6 @@ export class RolesService {
     return this.http.get<any[]>(url, { headers: reqHeader });
   }
 
- 
 
 
  
@@ -101,5 +100,19 @@ export class RolesService {
     });
     return this.http.post<any[]>(url, data, { headers: reqHeader });
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 }
