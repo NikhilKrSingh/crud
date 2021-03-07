@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNDQyNTg0NSwiZXhwIjoxNjE0NDM1ODQ1fQ.Z2o7PdSEUcLLGLqZdtXDlSyIezFAjwJyrE2kjEAug0c'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTA5NDI0NSwiZXhwIjoxNjE1MTA0MjQ1fQ.bCi2W9wtcgQHdMRaiI8a36fanecf-NxwW-3bMYcK4RU'
 
 
   getRoles() {
@@ -51,7 +51,7 @@ export class RolesService {
 
 
   updateRole(userData: any) {
-
+    // console.log('coming data', userData);
     const url = ' http://devourin-api-qa.chain-expert.com/v1/updateuser';
     
 
@@ -65,7 +65,7 @@ export class RolesService {
 
   
   updateData(userData: any) {
-    console.log('coming');
+    // console.log('coming');
     const url = 'http://devourin-api-qa.chain-expert.com/v1/updateuser';
     
 
@@ -82,6 +82,7 @@ export class RolesService {
   }
 
   createRole(data: any){
+    // console.log("create role data", data);
     const url = 'http://devourin-api-qa.chain-expert.com/v1/register'
    
     var reqHeader = new HttpHeaders({

@@ -11,14 +11,21 @@ import { RolesService } from '../role.service';
 })
 export class CreateRoleComponent implements OnInit {
   userName: any;
-  data={
-    "active": true,
-    "tenant_id": 23,
-    "name": "",
-    "first_name":"",
-    "last_name":"",
-    "email":"",
-    "phone":"",
+  data= {
+    is_reset_password: false,
+    active: true,
+    tenant_id: 23,
+    role_id: 0,
+    username: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    created_by: "",
+    updated_by: "",
+    updatedAt: "",
+    createdAt: ""
+  
   }
   name: string | undefined;
   role: string | undefined;
@@ -40,47 +47,37 @@ export class CreateRoleComponent implements OnInit {
 
   createRole() {
   
-    
-     
-
-      // this.name = (<HTMLSelectElement>document.getElementById('roll')).value;
-      // console.log(this.role)
-
-      var demodata = window.localStorage.getItem('userData');
-      let s = demodata;
-      var d = JSON.parse("" + s);
-  
-  
-  
-     
-    this.name = (<HTMLSelectElement>document.getElementById('username')).value;
-    this.data.name = this.name;
-    console.log(this.name)
+    //  console.log("data");
+    this.data.username = (<HTMLSelectElement>document.getElementById('username')).value;
+    //this.data.username = this.name;
+    // console.log(this.data.username)
    
 
 
-    this.firstName = (<HTMLSelectElement>document.getElementById('first_name')).value;
-    this.data.first_name = this.firstName;
-    console.log(this.firstName)
+    this.data.first_name = (<HTMLSelectElement>document.getElementById('first_name')).value;
+    //this.data.first_name = this.firstName;
+    // console.log(this.firstName)
 
-    this.lastName = (<HTMLSelectElement>document.getElementById('last_name')).value;
-    this.data.first_name = this.lastName;
-    console.log(this.lastName)
+    this.data.last_name= (<HTMLSelectElement>document.getElementById('last_name')).value;
+    //this.data.first_name = this.lastName;
+    // console.log(this.lastName)
 
-    this.email = (<HTMLSelectElement>document.getElementById('email')).value;
-    this.data.email = this.email;
-    console.log(this.email)
+    this.data.email = (<HTMLSelectElement>document.getElementById('email')).value;
+    //this.data.email = this.email;
+    // console.log(this.email)
 
    
 
-    this.phno = (<HTMLSelectElement>document.getElementById('phone')).value;
-    this.data.phone = this.phno;
-    console.log(this.phno)
+    this.data.phone = (<HTMLSelectElement>document.getElementById('phone')).value;
+    //this.data.phone = this.phno;
+    // console.log(this.phno)
 
-    this.role = (<HTMLSelectElement>document.getElementById('role_id')).value;
-    this.data.name = this.role;
+    this.data.role_id =parseInt((<HTMLSelectElement>document.getElementById('role_id')).value);
     console.log(this.role)
-
+    var date = new Date().toISOString();
+    console.log(date);
+    this.data.createdAt = date;
+    this.data.updatedAt = date;
 
     this.user_roles.createRole(this.data).subscribe((result:any)=>{
       this.router.navigateByUrl('/user-list');

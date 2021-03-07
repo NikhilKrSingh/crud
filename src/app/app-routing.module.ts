@@ -6,10 +6,13 @@ import { CreateUserComponent }from './create-user/create-user.component';
 // import { NewUserComponent } from './new-user/new-user.component';
 // import './new-user/new-user.component.css';
 import { CreateRoleComponent } from './create-role/create-role.component';
+import './report/report.component.css';
+import { ReportComponent } from './report/report.component';
 
 
 
 const routes: Routes = [
+  
 
 {
   path: 'user-list',
@@ -25,6 +28,11 @@ const routes: Routes = [
  path:'create-role',
  component: CreateRoleComponent
 },
+
+{
+  path:'report',
+  component: ReportComponent
+ }
 
 
 ];

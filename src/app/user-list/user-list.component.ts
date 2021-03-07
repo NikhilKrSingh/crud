@@ -10,6 +10,7 @@ import { RolesService } from '../role.service';
 
 
 
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -32,7 +33,7 @@ export class UserListComponent implements OnInit {
   constructor( private router: Router,private user_roles:RolesService ) { }
 
   ngOnInit(): void {
-
+    
     this.user_roles.getUserList().subscribe((result: any) => {
       console.log(result.data);
       const data = result.data;

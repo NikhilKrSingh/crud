@@ -11,11 +11,22 @@ import { CreateRoleComponent } from './create-role/create-role.component';
 
 import { RoleSearchPipe } from './role-search.pipe';
 
-import { NgxPaginationModule } from 'ngx-pagination';
+
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { ApexReportComponent } from './apex-report/apex-report.component';
-import { NgApexchartsModule, ApexChart } from 'ng-apexcharts';
+
+
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { RouterModule, Routes } from '@angular/router';
+import { ReportComponent } from './report/report.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
+
 
 
 @NgModule({
@@ -25,20 +36,29 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     CreateUserComponent,
     RoleSearchPipe,
     CreateRoleComponent,
-    ApexReportComponent,
+    ReportComponent
+  
+ 
     
 
   ],
   imports: [
-    BrowserModule,
+
+
+
+    RouterModule.forRoot([]),
+  BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule,
-    NgApexchartsModule,
-    Ng2SearchPipeModule
+  NgxPaginationModule,
+    Ng2SearchPipeModule,
+    ChartsModule,
+    BrowserAnimationsModule
     ],
   providers: [NgbActiveModal],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  AppComponent: any
+}
