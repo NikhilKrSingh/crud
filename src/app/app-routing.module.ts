@@ -6,8 +6,11 @@ import { CreateUserComponent }from './create-user/create-user.component';
 // import { NewUserComponent } from './new-user/new-user.component';
 // import './new-user/new-user.component.css';
 import { CreateRoleComponent } from './create-role/create-role.component';
-import './report/report.component.css';
-import { ReportComponent } from './report/report.component';
+// import { BarChartComponent } from './bar-chart/bar-chart.component';
+// import './report/report.component.css';
+// import { ReportComponent } from './report/report.component';
+// import { BarChartComponent } from './bar-chart/bar-chart.component';
+
 
 
 
@@ -29,11 +32,11 @@ const routes: Routes = [
  component: CreateRoleComponent
 },
 
-{
-  path:'report',
-  component: ReportComponent
- }
 
+// {
+//   path:'bar-chart',
+//   component: BarChartComponent
+// }
 
 ];
 

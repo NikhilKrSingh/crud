@@ -11,6 +11,7 @@ import { RolesService } from '../role.service';
 
 
 
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -23,11 +24,12 @@ export class UserListComponent implements OnInit {
   id: any;
   role: any;
   userData: any;
+  tempData: any;
 
  
-  totalRecords: any
+  totalRecords: any;
   page: number = 1;
-  searchValue: any
+  searchValue: any;
   order: any;
 
   constructor( private router: Router,private user_roles:RolesService ) { }
@@ -50,7 +52,6 @@ export class UserListComponent implements OnInit {
   }
 
 
-  
 
 
 

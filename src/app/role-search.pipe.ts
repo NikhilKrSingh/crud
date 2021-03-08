@@ -16,19 +16,24 @@ export class RoleSearchPipe implements PipeTransform {
   }
 
 
-  transform(users: any[], searchValue: string): any { 
-    this.user_roles.getRoles().subscribe((result: any) => {
-      let data = result['data'];
-      this.data = data['roleList']
+  transform(user: any[], searchValue: string): any { 
+    this.user_roles.getUserList().subscribe((result: any) => {
+      let user = result['data'];
+      this.data = user['name']
     })
 
-    if(!users || !searchValue){
-      return users;
+    if(!user || !searchValue){
+      return user;
     }
 
-    return users.filter(users=>
-      users.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()));
-
+    return user.filter(user=>
+    
+        user.username.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())||
+        user.first_name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())||
+        user.last_name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())||
+        user.email.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())||
+        user.phone.toString().toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+        );
   }
 
 }

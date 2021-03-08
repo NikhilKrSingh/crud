@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule, PipeTransform } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{ FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -16,15 +16,21 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { ChartsModule } from 'ng2-charts';
+
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule, Routes } from '@angular/router';
-import { ReportComponent } from './report/report.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+// import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 
-
+import { NgApexchartsModule} from 'ng-apexcharts';
+// import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { ChartModule } from "primeng/chart";
 
 
 
@@ -36,29 +42,39 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CreateUserComponent,
     RoleSearchPipe,
     CreateRoleComponent,
-    ReportComponent
-  
- 
-    
-
+    // BarChartComponent
   ],
   imports: [
 
 
 
+
     RouterModule.forRoot([]),
-  BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-  NgxPaginationModule,
+    NgxPaginationModule,
     Ng2SearchPipeModule,
-    ChartsModule,
-    BrowserAnimationsModule
-    ],
+    NgApexchartsModule,
+
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    ChartModule,
+    NgApexchartsModule,
+ 
+
+
+
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   providers: [NgbActiveModal],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   AppComponent: any
 }

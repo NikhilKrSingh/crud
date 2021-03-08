@@ -1,51 +1,52 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
 
-  
 
-    <form class="row g-3"  #namef="ngForm"  (ngSubmit)="onSubmit()">
 
-      <div class="col-md-4">
-        <label for="role_id" class="form-label">Select role <Sup>*</Sup></label>
-        <select id="role_id" class="form-select" value="{{role}}">
+    <form class="row g-3" #namef="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="col-md-4">
+            <label for="role_id" class="form-label">Select role <Sup>*</Sup></label>
+            <select id="role_id" class="form-select" value="{{role}}">
           <option value=35>Tenant Admin</option>
           <option value=37>Manager</option>
         </select>
-      </div>
+        </div>
 
-      <div class="col-md-4">
-        <label for="inputUser" class="form-label">User Name <Sup>*</Sup></label>
-        <input type="text" class="form-control" id="username" name="username" value="{{name}}" >
-      </div>
-
-
-      <div class="col-md-4">
-        <label for="inputFirst" class="form-label">First Name<sup>*</sup></label>
-        <input type="text" class="form-control" id="first_name" name="first_name" value="{{firstName}}">
-      </div>
-      <br>
-      <br>
-
-      <div class="col-md-4">
-        <label for="inputLast" class="form-label">Last Name<sup>*</sup></label>
-        <input type="text" class="form-control" id="last_name" name="last_name" value="{{lastName}}">
-      </div>
-
-      <div class="col-md-4">
-        <label for="inputemail" class="form-label">Email<sup>*</sup></label>
-        <input type="email" class="form-control" id="email" name="email" value="{{email}}">
-      </div>
-
-      
-      <div class="col-md-4">
-        <label for="inputPhone" class="form-label" placeholder="Enter Phone">Phone</label>
-        <input type="text" class="form-control" id="phone" name="phone" value="{{phno}}" >
-      </div>
-      
+        <div class="col-md-4">
+            <label for="inputUser" class="form-label">User Name <Sup>*</Sup></label>
+            <input type="text" class="form-control" id="username" name="username" value="{{name}}">
+        </div>
 
 
-      
-        <button type="submit" class="btn btn-primary" >Update</button>
+        <div class="col-md-4">
+            <label for="inputFirst" class="form-label">First Name<sup>*</sup></label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{firstName}}">
+        </div>
+        <br>
+        <br>
 
+        <div class="col-md-4">
+            <label for="inputLast" class="form-label">Last Name<sup>*</sup></label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{lastName}}">
+        </div>
+
+        <div class="col-md-4">
+            <label for="inputemail" class="form-label">Email<sup>*</sup></label>
+            <input type="email" class="form-control" id="email" name="email" value="{{email}}">
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="inputPhone" class="form-label" placeholder="Enter Phone">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{phno}}">
+        </div>
+
+
+
+        <div class="container">
+            <button type="submit" class="btn btn-primary">Update</button>
+
+        </div>
     </form>
-  
+
 </div>

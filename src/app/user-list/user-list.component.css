@@ -1,21 +1,21 @@
 body {
     font-family: Arial;
-  }
-  
-  * {
+}
+
+* {
     box-sizing: border-box;
-  }
-  
-  form.example input[type=text] {
+}
+
+form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
     float: left;
     width: 80%;
     background: #f1f1f1;
-  }
-  
-  form.example button {
+}
+
+form.example button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -25,14 +25,21 @@ body {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
-  
-  form.example button:hover {
+}
+
+form.example button:hover {
     background: #0b7dda;
-  }
-  
-  form.example::after {
+}
+
+form.example::after {
     content: "";
     clear: both;
     display: table;
-  }
+}
+
+.container {
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    padding-top: 15px;
+}
