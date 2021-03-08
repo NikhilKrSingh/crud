@@ -74,7 +74,7 @@ export class DateRangePickerOverviewExampleComponent implements OnInit {
       },
       series: [{
         name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        data: [10, 41, 35, 51, 49, 62, 69, 19, 148,88,75,100],
       }],
       title: {
         text: 'Product Trends by Month',
@@ -87,7 +87,7 @@ export class DateRangePickerOverviewExampleComponent implements OnInit {
         },
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep','oct','nov','dec'],
       },
       yaxis: {
         tickAmount: 5,
