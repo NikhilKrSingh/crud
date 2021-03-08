@@ -43,3 +43,7 @@ form.example::after {
     height: 45px;
     padding-top: 15px;
 }
+
+.table {
+    width: 100%;
+}

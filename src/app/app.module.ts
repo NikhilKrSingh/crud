@@ -31,6 +31,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgApexchartsModule} from 'ng-apexcharts';
 // import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ChartModule } from "primeng/chart";
+import { DateRangePickerOverviewExampleComponent } from './date-range-picker-overview-example/date-range-picker-overview-example.component';
+// import { ChartComponent } from './Apexchart/chart.component';
 
 
 
@@ -42,6 +44,8 @@ import { ChartModule } from "primeng/chart";
     CreateUserComponent,
     RoleSearchPipe,
     CreateRoleComponent,
+    DateRangePickerOverviewExampleComponent,
+    // ChartComponent,
     // BarChartComponent
   ],
   imports: [
@@ -57,7 +61,7 @@ import { ChartModule } from "primeng/chart";
     NgxPaginationModule,
     Ng2SearchPipeModule,
     NgApexchartsModule,
-
+    
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
