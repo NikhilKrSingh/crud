@@ -12,19 +12,6 @@ export class RolesService {
 
   token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTI2NTE3MiwiZXhwIjoxNjE1Mjc1MTcyfQ.gi7p9ZcHcGFXhMuJx72PooyfpeB2WhFor4CekPn2d2M'
 
-
-  getRoles() {
-    const url = 'http://devourin-api-qa.chain-expert.com/role/getrolelist?recordsTofetch=1&tenant_id=23'
-    
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': this.token
-    });
-    return this.http.get<any[]>(url, { headers: reqHeader });
-  }
-
-
-
   getUInactive() {
     const url = 'http://devourin-api-qa.chain-expert.com/role/getrolelist?recordsTofetch=2&tenant_id=23'
     
@@ -36,8 +23,6 @@ export class RolesService {
   }
 
 
-
- 
 
   getUserList() {
     const url = 'http://devourin-api-qa.chain-expert.com/v1/getuserlist?recordsTofetch=1&tenant_id=23';
@@ -51,7 +36,7 @@ export class RolesService {
 
 
   updateRole(userData: any) {
-    // console.log('coming data', userData);
+   
     const url = ' http://devourin-api-qa.chain-expert.com/v1/updateuser';
     
 
@@ -64,25 +49,9 @@ export class RolesService {
 
 
   
-  updateData(userData: any) {
-    // console.log('coming');
-    const url = 'http://devourin-api-qa.chain-expert.com/v1/updateuser';
-    
-
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': this.token
-    });
-    console.log('middle');
-
-    
-    return this.http.put<any>(url, userData, { headers: reqHeader });
-    
-    
-  }
 
   createRole(data: any){
-    // console.log("create role data", data);
+
     const url = 'http://devourin-api-qa.chain-expert.com/v1/register'
    
     var reqHeader = new HttpHeaders({

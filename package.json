@@ -24,6 +24,7 @@
     "@angular/router": "~11.2.1",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^9.0.2",
+    "@progress/kendo-drawing": "^1.9.4",
     "@syncfusion/ej2-angular-charts": "^18.4.46",
     "@syncfusion/ej2-ng-charts": "^16.2.50",
     "@types/chart.js": "^2.9.31",
