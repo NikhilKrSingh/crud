@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTIwMTk4MCwiZXhwIjoxNjE1MjExOTgwfQ.l9LD8gHVBmr6KAZnsb_-bb1UL_VFuH8_c9ip6pwaUbY'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTI2NTE3MiwiZXhwIjoxNjE1Mjc1MTcyfQ.gi7p9ZcHcGFXhMuJx72PooyfpeB2WhFor4CekPn2d2M'
 
 
   getRoles() {

@@ -73,11 +73,11 @@ export class DateRangePickerOverviewExampleComponent implements OnInit {
         curve: 'straight'
       },
       series: [{
-        name: "Desktops",
+        name: "Sale",
         data: [10, 41, 35, 51, 49, 62, 69, 19, 148,88,75,100],
       }],
       title: {
-        text: 'Product Trends by Month',
+        text: 'Sales-Order Trend by Month',
         align: 'left'
       },
       grid: {
