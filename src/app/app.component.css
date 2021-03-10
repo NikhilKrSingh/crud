@@ -3,7 +3,7 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: grey;
+    background-color: rebeccapurple;
 }
 
 a {
@@ -20,4 +20,8 @@ a {
 
 a:hover {
     background-color: #111;
+}
+
+span {
+    font-weight: bold;
 }
