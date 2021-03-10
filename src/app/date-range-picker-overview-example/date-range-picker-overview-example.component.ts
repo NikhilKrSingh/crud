@@ -60,7 +60,7 @@ export class DateRangePickerOverviewExampleComponent implements OnInit {
     this.barChartOptions = {
       chart: {
         height: 350,
-        type: 'bar',
+        type: 'line',
         zoom: {
           enabled: false
         }

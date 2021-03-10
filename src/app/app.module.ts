@@ -32,6 +32,7 @@ import { NgApexchartsModule} from 'ng-apexcharts';
 // import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ChartModule } from "primeng/chart";
 import { DateRangePickerOverviewExampleComponent } from './date-range-picker-overview-example/date-range-picker-overview-example.component';
+import { HomeComponent } from './home/home.component';
 // import { ChartComponent } from './Apexchart/chart.component';
 
 
@@ -45,6 +46,7 @@ import { DateRangePickerOverviewExampleComponent } from './date-range-picker-ove
     RoleSearchPipe,
     CreateRoleComponent,
     DateRangePickerOverviewExampleComponent,
+    HomeComponent,
     // ChartComponent,
     // BarChartComponent
   ],

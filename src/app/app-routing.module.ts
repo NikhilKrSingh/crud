@@ -7,6 +7,7 @@ import { CreateUserComponent }from './create-user/create-user.component';
 // import './new-user/new-user.component.css';
 import { CreateRoleComponent } from './create-role/create-role.component';
 // import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { HomeComponent } from './home/home.component';
 import { DateRangePickerOverviewExampleComponent } from './date-range-picker-overview-example/date-range-picker-overview-example.component';
 // import { ChartComponent } from './Apexchart/chart.component';
 // import './report/report.component.css';
@@ -38,7 +39,13 @@ const routes: Routes = [
 {
   path:'date-range-picker-overview-example',
   component: DateRangePickerOverviewExampleComponent
+},
+
+{
+  path:'home',
+  component: HomeComponent
 }
+
 
 ];
 
