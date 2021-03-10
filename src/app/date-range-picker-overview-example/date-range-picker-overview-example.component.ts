@@ -1,42 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import {
+import { RolesService } from '../role.service';
+import  { Router, ActivatedRoute } from '@angular/router';
+
+
+
+import{
   ApexAxisChartSeries,
   ApexChart,
-  ApexXAxis,
-  ApexYAxis,
-  ApexGrid,
+  ChartComponent,
   ApexDataLabels,
-  ApexStroke,
-  ApexTitleSubtitle,
-  ApexTooltip,
-  ApexLegend,
   ApexPlotOptions,
+  ApexResponsive,
+  ApexXAxis,
+  ApexLegend,
   ApexFill,
-  ApexMarkers,
-  ApexTheme,
+  ApexYAxis,
+  ApexTooltip,
+  ApexTitleSubtitle,
+  ApexStroke,
   ApexNonAxisChartSeries,
-  ApexResponsive
 } from "ng-apexcharts";
 
-export type ChartOptions = {
-  series: ApexAxisChartSeries | ApexNonAxisChartSeries;
-  colors: string[],
+
+
+
+export type chartOptionsComparison = {
+  series: ApexAxisChartSeries;
   chart: ApexChart;
   xaxis: ApexXAxis;
-  yaxis: ApexYAxis | ApexYAxis[],
-  title: ApexTitleSubtitle;
-  dataLabels: ApexDataLabels,
-  stroke: ApexStroke,
-  grid: ApexGrid,
-  legend?: ApexLegend,
-  tooltip?: ApexTooltip,
-  plotOptions?: ApexPlotOptions,
-  labels?: string[],
-  fill: ApexFill,
-  markers?: ApexMarkers,
-  theme: ApexTheme,
-  responsive: ApexResponsive[]
-};
+  yaxis: ApexYAxis | ApexYAxis[];
+  labels: string[];
+  plotOptions: ApexPlotOptions;
+  stroke: ApexStroke; // ApexStroke;
+  dataLabels: any; // ApexDataLabels;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  legend: ApexLegend;
+  responsive: ApexResponsive[];
+  };
+
+
 
 var $primary = "#975AFF",
   $success = "#40C057",
@@ -53,10 +56,23 @@ var themeColors = [$primary, $warning, $success, $danger, $info];
 })
 export class DateRangePickerOverviewExampleComponent implements OnInit {
   barChartOptions: any;
+  data={
+    name:"",
+    type:"",
+    data:"",
+    dateList:""
+  }
 
+  name:string | undefined;
+  type:string | undefined;
+  
+  dateList:string | undefined;
 
-  constructor() {
+constructor(private user_roles: RolesService,private route:Router,private activatedroute:ActivatedRoute){}
 
+  ngOnInit(): void {
+
+    
     this.barChartOptions = {
       chart: {
         height: 350,
@@ -93,11 +109,13 @@ export class DateRangePickerOverviewExampleComponent implements OnInit {
         tickAmount: 5,
       }
     }
-
-  }
-  ngOnInit(): void {
     
   }
+
+  updateSeries(){
+    
+  }
+
 
 }
 

@@ -10,7 +10,7 @@ export class RolesService {
 
   constructor(private http: HttpClient) { }
 
-  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTM1MjYwNywiZXhwIjoxNjE1MzYyNjA3fQ.J3bqVq1A6zql8OLNnkCuLG_Qrdk3dHuvlYbGFAf09iw'
+  token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNCwicm9sZV9pZCI6MzUsImlhdCI6MTYxNTM3MjM3MiwiZXhwIjoxNjE1MzgyMzcyfQ.lCDtWUkALuKYkoy4QVp6i-CHk8u822zlaFUXAbXOeoM'
 
   getUInactive() {
     const url = 'http://devourin-api-qa.chain-expert.com/role/getrolelist?recordsTofetch=2&tenant_id=23'
