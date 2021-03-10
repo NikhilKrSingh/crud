@@ -56,17 +56,17 @@ var themeColors = [$primary, $warning, $success, $danger, $info];
 })
 export class DateRangePickerOverviewExampleComponent implements OnInit {
   barChartOptions: any;
-  data={
-    name:"",
-    type:"",
-    data:"",
-    dateList:""
-  }
+  // data={
+  //   name:"",
+  //   type:"",
+  //   data:"",
+  //   dateList:""
+  // }
 
-  name:string | undefined;
-  type:string | undefined;
+  // name:string | undefined;
+  // type:string | undefined;
   
-  dateList:string | undefined;
+  // dateList:string | undefined;
 
 constructor(private user_roles: RolesService,private route:Router,private activatedroute:ActivatedRoute){}
 

@@ -1,7 +1,7 @@
-<div class="bg-light border-right" id="sidebar-wrapper">
+<!-- <div class="bg-light border-right" id="sidebar-wrapper">
 
 
-</div>
+</div> -->
 
 <div id="page-content-wrapper">
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -21,7 +21,7 @@
 
         <div class="container">
 
-            <button class="btn btn-dark" routerLink="/create-role">Create User</button>
+            <button class="btn btn-outline-dark" routerLink="/create-role">Create User</button>
         </div>
         <br>
         <br>
@@ -78,11 +78,11 @@
                 </td>
                 <td *ngIf="user.active==false"><b>-</b></td>
 
-                <td *ngIf="user.active==true"><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Delete</button></td>
+                <td *ngIf="user.active==true"><button type="button" class="btn btn-outline-danger" (click)="deactivateRole(user.id)">Delete</button></td>
                 <!-- <td *ngIf="user.active==false"><button type="button" class="btn btn-danger" (click)="deactivateRole(user.id)">Activate</button></td> -->
 
 
-                <!-- <td><button type="button" class="btn btn-danger" (click)="deleteuser(user.id)">Delete</button> -->
+                <!-- <td><button type="button" class="btn btn-danger" (click)="deleteuser(user.id)">Delete</buton> -->
 
             </tr>
 
